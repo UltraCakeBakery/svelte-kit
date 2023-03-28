@@ -12,13 +12,13 @@ import options from './options.js';
 export function load_template(cwd, { kit }) {
 	const { env } = kit;
 
-	const relative = path.relative(cwd, 'app/+base.html');
+	const relative = path.relative(cwd, 'app/base.html');
 
-	if (!fs.existsSync('app/+base.html')) {
+	if (!fs.existsSync('app/base.html')) {
 		throw new Error(`${relative} does not exist`);
 	}
 
-	const contents = fs.readFileSync('app/+base.html', 'utf8');
+	const contents = fs.readFileSync('app/base.html', 'utf8');
 
 	const expected_tags = ['%sveltekit.head%', '%sveltekit.body%'];
 	expected_tags.forEach((tag) => {

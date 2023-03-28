@@ -657,7 +657,7 @@ test.describe('Content negotiation', () => {
 });
 
 test.describe('env', () => {
-	test('can access public env in +base.html', async ({ page }) => {
+	test('can access public env in base.html', async ({ page }) => {
 		await page.goto('/');
 		expect(await page.locator('body').getAttribute('class')).toContain('groovy');
 	});

@@ -299,7 +299,7 @@ export async function dev(vite, vite_config, svelte_config) {
 
 	vite.watcher.on('all', (_, file) => {
 		if (
-			file === 'app/+base.html' ||
+			file === 'app/base.html' ||
 			file === errorTemplate ||
 			file.startsWith(serviceWorker) ||
 			file.startsWith(hooks.server)
