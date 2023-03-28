@@ -85,7 +85,6 @@ const get_defaults = (prefix = '') => ({
 			params: join(prefix, 'src/params'),
 			routes: join(prefix, 'src/routes'),
 			serviceWorker: join(prefix, 'src/service-worker'),
-			appTemplate: join(prefix, 'src/app.html'),
 			errorTemplate: join(prefix, 'src/error.html')
 		},
 		inlineStyleThreshold: 0,

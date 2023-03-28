@@ -128,7 +128,6 @@ const options = object(
 				params: string(join('src', 'params')),
 				routes: string(join('src', 'routes')),
 				serviceWorker: string(join('src', 'service-worker')),
-				appTemplate: string(join('src', 'app.html')),
 				errorTemplate: string(join('src', 'error.html'))
 			}),
 

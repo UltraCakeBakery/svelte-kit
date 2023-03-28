@@ -4,21 +4,21 @@ import * as url from 'node:url';
 import options from './options.js';
 
 /**
- * Loads the template (src/app.html by default) and validates that it has the
+ * Loads the template (app/base.html by default) and validates that it has the
  * required content.
  * @param {string} cwd
  * @param {import('types').ValidatedConfig} config
  */
 export function load_template(cwd, { kit }) {
-	const { env, files } = kit;
+	const { env } = kit;
 
-	const relative = path.relative(cwd, files.appTemplate);
+	const relative = path.relative(cwd, 'app/+base.html');
 
-	if (!fs.existsSync(files.appTemplate)) {
+	if (!fs.existsSync('app/+base.html')) {
 		throw new Error(`${relative} does not exist`);
 	}
 
-	const contents = fs.readFileSync(files.appTemplate, 'utf8');
+	const contents = fs.readFileSync('app/+base.html', 'utf8');
 
 	const expected_tags = ['%sveltekit.head%', '%sveltekit.body%'];
 	expected_tags.forEach((tag) => {
