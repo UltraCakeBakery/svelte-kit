@@ -1,5 +1,6 @@
 {
 	"image": "mcr.microsoft.com/devcontainers/universal:2",
+    "forwardPorts": [5173, 4173,5174, 4174],
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/pnpm:2": {}
 	},
@@ -11,8 +12,11 @@
 				"dbaeumer.vscode-eslint",
 				"svelte.svelte-vscode",
 				"streetsidesoftware.code-spell-checker",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"PKief.material-icon-theme",
+				"DavidAnson.vscode-markdownlint"
 			]
 		}
-	}
+	},
+	"postCreateCommand": "pnpm install"
 }
