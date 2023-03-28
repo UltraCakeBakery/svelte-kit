@@ -1,0 +1,18 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/pnpm:2": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"aaron-bond.better-comments",
+				"mrmlnc.vscode-duplicate",
+				"dbaeumer.vscode-eslint",
+				"svelte.svelte-vscode",
+				"streetsidesoftware.code-spell-checker",
+				"eamodio.gitlens"
+			]
+		}
+	}
+}
