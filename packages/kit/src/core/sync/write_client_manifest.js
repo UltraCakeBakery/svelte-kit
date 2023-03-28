@@ -106,7 +106,7 @@ export function write_client_manifest(kit, manifest_data, output, metadata) {
 		}
 	`;
 
-	const hooks_file = resolve_entry(kit.files.hooks.client);
+	const hooks_file = resolve_entry('app/+hooks.client.js');
 
 	write_if_changed(
 		`${output}/app.js`,

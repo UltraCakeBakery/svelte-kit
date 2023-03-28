@@ -66,7 +66,7 @@ export { set_assets, set_building, set_private_env, set_public_env };
 
 // TODO need to re-run this whenever app/+base.html or src/error.html are
 // created or changed, or src/service-worker.js is created or deleted.
-// Also, need to check that updating hooks.server.js works
+// Also, need to check that updating app/+hooks.server.js works
 
 /**
  * Write server configuration to disk
@@ -75,7 +75,7 @@ export { set_assets, set_building, set_private_env, set_public_env };
  */
 export function write_server(config, output) {
 	// TODO the casting shouldn't be necessary — investigate
-	const hooks_file = /** @type {string} */ (resolve_entry(config.kit.files.hooks.server));
+	const hooks_file = 'app/+hooks.server.js';
 
 	/** @param {string} file */
 	function relative(file) {

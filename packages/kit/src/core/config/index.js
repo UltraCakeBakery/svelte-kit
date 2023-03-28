@@ -82,13 +82,7 @@ function process_config(config, { cwd = process.cwd() } = {}) {
 	validated.kit.outDir = path.resolve(cwd, validated.kit.outDir);
 
 	for (const key in validated.kit.files) {
-		if (key === 'hooks') {
-			validated.kit.files.hooks.client = path.resolve(cwd, validated.kit.files.hooks.client);
-			validated.kit.files.hooks.server = path.resolve(cwd, validated.kit.files.hooks.server);
-		} else {
-			// @ts-expect-error
-			validated.kit.files[key] = path.resolve(cwd, validated.kit.files[key]);
-		}
+		validated.kit.files[key] = path.resolve(cwd, validated.kit.files[key]);
 	}
 
 	return validated;

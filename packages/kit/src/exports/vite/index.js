@@ -214,7 +214,7 @@ function kit({ svelte_config }) {
 
 			// We can only add directories to the allow list, so we find out
 			// if there's a client hooks file and pass its directory
-			const client_hooks = resolve_entry(kit.files.hooks.client);
+			const client_hooks = resolve_entry('app/+hooks.client.js');
 			if (client_hooks) allow.add(path.dirname(client_hooks));
 
 			const generated = path.posix.join(kit.outDir, 'generated');
