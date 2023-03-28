@@ -13,7 +13,7 @@
 		"format": "pnpm -r format",
 		"precommit": "pnpm format && pnpm lint",
 		"release": "changeset publish",
-		"start": "cd sites/kit.svelte.dev && npm run dev"
+		"start": "cd sites/kit.svelte.dev && pnpm run dev --host"
 	},
 	"repository": {
 		"type": "git",
